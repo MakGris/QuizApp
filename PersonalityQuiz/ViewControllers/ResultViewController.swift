@@ -12,12 +12,12 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
+    var answers: [Answer] = []
+    
     private var dogCount = 0
     private var catCount = 0
     private var turtleCount = 0
     private var rabbitCount = 0
-    
-    var answers: [Answer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
