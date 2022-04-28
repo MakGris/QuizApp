@@ -37,6 +37,14 @@ extension ResultViewController {
                 allAnimalsInAnswers[animal] = 1
             }
         }
+//        Можно сократить цикл следующим образом:
+//        Присваиваем значение в словарь по ключу animal, если ключ со значением есть, то прибавляем 1, если ключа со значением нет, то присваиваем 0 и прибавляем 1.
+/*
+          for animal in animals {
+         let allAnimalInAnswers[animal] = (allAnimalInAnswers[animal] ?? 0) + 1
+ }
+ */
+
         let sortedAllAnimalsInAnswers = allAnimalsInAnswers.sorted { $0.value > $1.value }
         guard let mostPopularAnimal = sortedAllAnimalsInAnswers.first?.key else { return }
         updateUI(with: mostPopularAnimal)
